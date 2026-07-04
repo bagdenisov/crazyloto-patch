@@ -1,0 +1,8 @@
+LIBRARY _dvapi32.dll
+EXPORTS
+    RegOpenKeyExA
+    RegCreateKeyExA = advapi32.RegCreateKeyExA
+    RegQueryValueExA
+    RegSetValueExA = advapi32.RegSetValueExA 
+    RegFlushKey
+    RegCloseKey

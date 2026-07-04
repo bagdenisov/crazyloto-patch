@@ -1,0 +1,26 @@
+#include <winuser.h>
+#include <winver.h>
+
+2 RT_MANIFEST "info.manifest"
+
+VS_VERSION_INFO VERSIONINFO
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0x0L
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "Me\0"
+            VALUE "FileDescription",  "Crazy Loto 4 Compatibility Helper\0"
+            VALUE "ProductName",      "DLL Hook\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
