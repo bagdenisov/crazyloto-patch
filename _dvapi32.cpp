@@ -50,20 +50,18 @@ __declspec(dllexport) LSTATUS WINAPI RegQueryValueExA(HKEY hKey, LPCSTR lpValueN
 	if (hKey == virtualReg) {
 		if (lpData == NULL) {
 			if (lpcbData != NULL) {
-				// Просто возвращаем нужный размер (например, для строки "MyString")
 				*lpcbData = (DWORD)(strlen("MyString") + 1); 
 			}
-			return ERROR_SUCCESS; // Или возвращаем успех, как это делает Windows
+			return ERROR_SUCCESS;
 		}
 
-		// 2. ПРОВЕРКА НА РАЗМЕР: Проверяем, хватит ли места в буфере пользователя
 		DWORD requiredSize = (DWORD)(strlen("MyString") + 1);
 
 		if (lpcbData == NULL || *lpcbData < requiredSize) {
 			if (lpcbData != NULL) {
-				*lpcbData = requiredSize; // Сообщаем, сколько байт нам нужно
+				*lpcbData = requiredSize;
 			}
-			return ERROR_MORE_DATA; // Ошибка: буфер слишком мал
+			return ERROR_MORE_DATA;
 		}
 		result = ERROR_SUCCESS;
 		if ((strcmp(lpValueName, GameDir) == 0)) {

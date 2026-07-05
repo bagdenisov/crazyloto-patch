@@ -14,7 +14,7 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "CompanyName",      "Me\0"
+            VALUE "CompanyName",      "bagdenisov\0"
             VALUE "FileDescription",  "Crazy Loto 4 Compatibility Helper\0"
             VALUE "ProductName",      "DLL Hook\0"
         END
